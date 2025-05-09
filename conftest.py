@@ -4,15 +4,20 @@ from selenium.webdriver.chrome.options import Options
 from pages.login_page import LoginPage
 from utils.config import BASE_URL, USERNAME, PASSWORD
 
+
 @pytest.fixture(scope="function")
 def browser():
-    """Initialize WebDriver"""
+    """Initialize WebDriver (headed mode)"""
     options = Options()
-    options.add_argument("--headless")  # Optional: run in background
+    # Remove or comment this line to run with browser visible
+    # options.add_argument("--headless")
+
     driver = webdriver.Chrome(options=options)
+
     driver.implicitly_wait(10)
     yield driver
     driver.quit()
+
 
 @pytest.fixture(scope="function")
 def logged_in_browser(browser):

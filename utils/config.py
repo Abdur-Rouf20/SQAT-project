@@ -1,4 +1,4 @@
 # utils/config.py
-BASE_URL = "http://example.com"
-USERNAME = "your_username"
-PASSWORD = "your_password"
+BASE_URL = "https://ems-test.amaderit.net/"
+USERNAME = "adming1"
+PASSWORD = "123456"

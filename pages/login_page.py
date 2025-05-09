@@ -5,9 +5,9 @@ from utils.config import BASE_URL
 class LoginPage(BasePage):
     URL = f"{BASE_URL}/login"
 
-    USERNAME_INPUT = (By.ID, "username")
-    PASSWORD_INPUT = (By.ID, "password")
-    LOGIN_BUTTON = (By.ID, "loginBtn")
+    USERNAME_INPUT = (By.XPATH, "//input[@id='username']")
+    PASSWORD_INPUT = (By.XPATH, "//input[@id='password']")
+    LOGIN_BUTTON = (By.ID, "//button[normalize-space()='Sign In']")
 
     def open(self):
         self.driver.get(self.URL)
