@@ -10,4 +10,4 @@ def test_home_page_title(logged_in_browser):
     print(f"Actual Page Title: {home_page.get_title()}")
 
     # Assert the title matches your expectations
-    assert "Dashboard" in home_page.get_title()
+    assert "EMS:Administer/Dashboard" in home_page.get_title()
