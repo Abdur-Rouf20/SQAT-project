@@ -9,7 +9,7 @@ from pages.login_page import LoginPage
 from utils.config import BASE_URL, USERNAME, PASSWORD
 
 # ----------------------------
-# Pytest-html integration
+# Pytest-html integrated
 # ----------------------------
 
 def pytest_configure(config):
